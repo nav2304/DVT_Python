@@ -1,8 +1,8 @@
 id,name,dept,salary
-Rajesh,management,12000
-Suresh,engineering,9000
-Neha,hr,7000
-Geeta,admin,6000
-Kamlesh,engineering,9000
-John,sales,8000
-Sneha,engineering,10000
+1001,Rajesh,management,12000.00
+1002,Suresh,engineering,9000.00
+1003,Neha,hr,7000.00
+1004,Geeta,admin,6000.00
+1005,Kamlesh,engineering,9000.00
+1006,John,sales,8000.00
+1007,Sneha,engineering,10000.00

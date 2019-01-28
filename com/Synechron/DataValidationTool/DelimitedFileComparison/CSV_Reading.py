@@ -1,6 +1,10 @@
 import pandas as pd
 df_source = pd.read_csv("F:\\Git_Projects\\DVT_Pyhon\\Files\\csv\\Source.csv")
 df_target = pd.read_csv("F:\\Git_Projects\\DVT_Pyhon\\Files\\csv\\Target.csv")
+
+df_failures = pd.DataFrame(columns=df_source.columns)
+#df_failures.append(df_source.iloc[0])
+
 print("Source: Total no of rows are = " + str(df_source.shape[0]))
 print("Source: Total no of columns are = " + str(df_source.shape[1]))
 
@@ -14,7 +18,12 @@ for iRowCounter in range(df_source.shape[0]):
             #print(str(df_source.iloc[iRowCounter][iColumnCounter]) + " matches with " + str(df_target.iloc[iRowCounter][iColumnCounter]))
             pass
         else:
-            print(str(df_source.iloc[iRowCounter][iColumnCounter]) + " do not match with " + str(df_target.iloc[iRowCounter][iColumnCounter]))
+            #print(str(df_source.iloc[iRowCounter][iColumnCounter]) + " do not match with " + str(df_target.iloc[iRowCounter][iColumnCounter]))
+            print(df_source.iloc[iRowCounter])
+            print(df_target.iloc[iRowCounter])
+            df_failures = df_failures.append(df_source.iloc[iRowCounter])
+            df_failures = df_failures.append(df_target.iloc[iRowCounter])
+            break
 
 
 print(df_source.iloc[1][3])

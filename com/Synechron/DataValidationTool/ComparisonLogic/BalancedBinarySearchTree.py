@@ -1,7 +1,21 @@
 # Python code to insert a node in AVL tree
 
+'''**
+ * ###################################################################################
+ * @Name : TreeNode
+ * @Purpose :  Create balanced data tree
+ * @Parameters : Object
+ * @ReturnType : NA
+ * @Author : Vaijnath Palwade 
+ * @CreationDate : 02-07-2019
+ * @Modification : 
+ * ###################################################################################
+**'''
+
+
 # Generic tree node class
 class TreeNode(object):
+
     def __init__(self, val):
         self.val = val
         self.left = None
@@ -9,9 +23,10 @@ class TreeNode(object):
         self.height = 1
 
 
-# AVL tree class which supports the
-# Insert operation
-class AVL_Tree(object):
+'''Balanced Search Trees for Data comparison with threads'''
+
+
+class BalancedTree(object):
 
     # Recursive function to insert key in
     # subtree rooted with node and returns
@@ -109,34 +124,6 @@ class AVL_Tree(object):
         if not root:
             return
 
-        print("{0} ".format(root.val), end="")
+        print("{0} ".format(root.val))
         self.preOrder(root.left)
         self.preOrder(root.right)
-
-    # Driver program to test above function
-
-
-myTree = AVL_Tree()
-root = None
-
-root = myTree.insert(root, 10)
-root = myTree.insert(root, 20)
-root = myTree.insert(root, 30)
-root = myTree.insert(root, 40)
-root = myTree.insert(root, 50)
-root = myTree.insert(root, 25)
-
-"""The constructed AVL Tree would be 
-			30 
-		/ \ 
-		20 40 
-		/ \	 \ 
-	10 25 50"""
-
-# Preorder Traversal
-print("Preorder traversal of the",
-      "constructed AVL tree is")
-myTree.preOrder(root)
-print()
-
-# This code is contributed by Ajitesh Pathak
